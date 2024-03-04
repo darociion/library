@@ -40,6 +40,10 @@ i {
     color: #fff;
 }
 
+.modal-dm {
+    background-color: #495057;
+}
+
 #add-book {
     position: fixed;
     right: 2rem;
@@ -54,4 +58,23 @@ i {
 .btn-primary:hover {
     background-color: #6B8E23;
     border: none;
+}
+
+@media (min-width: 576px) {
+    #modal {
+        right: 0;
+        width: 100%;
+    }
+
+    #add-book {
+        right: 0.5rem;
+        bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    #modal {
+        right: 40%;
+        width: 300px;
+    }
 }

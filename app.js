@@ -1,6 +1,7 @@
 let myLibrary = [];
 let tableBody = document.getElementById("table-body");
 
+// Create book class
 class Book {
     constructor(title, author, pages, read) {
         this.title = title;
@@ -10,16 +11,19 @@ class Book {
     }
 }
 
+// Show modal to user
 function showModal() {
     let modal = document.getElementById("modal");
     modal.style.display = "block";
 }
 
+// Close modal when user close it
 function closeModal() {
     let modal = document.getElementById("modal");
     modal.style.display = "none";
 }
 
+// Save book, display it on the table and clear the form
 function saveBook() {
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
@@ -35,6 +39,7 @@ function saveBook() {
     clearForm();
 }
 
+// Clear the form
 function clearForm() {
     document.getElementById("title").value = "";
     document.getElementById("author").value = "";
@@ -42,6 +47,7 @@ function clearForm() {
     document.getElementById("read").checked = false;
 }
 
+// Display books on the table
 function displayBooks() {
     tableBody.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
@@ -79,6 +85,7 @@ function displayBooks() {
     }
 }
 
+// Activate dark mode
 function darkMode() {
     let body = document.body;
     let table = document.getElementById("table");
@@ -88,7 +95,7 @@ function darkMode() {
     body.classList.toggle("text-light");
     table.classList.toggle("bg-dark");
     table.classList.toggle("text-light");
-    modal.classList.toggle("bg-dark");
+    modal.classList.toggle("modal-dm");
     modal.classList.toggle("text-light");
     lightbulb.classList.toggle("bi-lightbulb");
     lightbulb.classList.toggle("bi-lightbulb-fill");
