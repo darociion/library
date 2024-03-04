@@ -60,7 +60,7 @@ i {
     border: none;
 }
 
-@media (min-width: 0px) {
+@media (min-width: 0) {
     #modal {
         right: 0;
         width: 100%;
@@ -69,6 +69,19 @@ i {
     #add-book {
         right: 0.5rem;
         bottom: 0.5rem;
+    }
+
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 440px) {
+    table {
+        display: inline-table;
     }
 }
 
