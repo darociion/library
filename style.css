@@ -44,12 +44,6 @@ i {
     background-color: #495057;
 }
 
-#add-book {
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-}
-
 .btn-primary {
     background-color: #556B2F;
     border: none;
@@ -67,8 +61,11 @@ i {
     }
 
     #add-book {
-        right: 0.5rem;
-        bottom: 0.5rem;
+        visibility: hidden;
+    }
+
+    #add-book-responsive {
+        visibility: visible;
     }
 
     table {
@@ -83,11 +80,27 @@ i {
     table {
         display: inline-table;
     }
+
+    #add-book {
+        right: 0.5rem;
+        bottom: 0.5rem;
+    }
 }
 
 @media (min-width: 992px) {
     #modal {
         right: 40%;
         width: 300px;
+    }
+
+    #add-book {
+        visibility: visible;
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+    }
+
+    #add-book-responsive {
+        visibility: hidden;
     }
 }
