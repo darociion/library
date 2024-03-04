@@ -60,7 +60,7 @@ i {
     border: none;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 0px) {
     #modal {
         right: 0;
         width: 100%;
