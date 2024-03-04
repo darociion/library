@@ -56,9 +56,15 @@ function displayBooks() {
         td2.textContent = myLibrary[i].title;
         td3.textContent = myLibrary[i].author;
         td4.textContent = myLibrary[i].pages;
-        td5.textContent = myLibrary[i].read;
-        td6.textContent = "Remove";
-        td6.className = "text-danger remove";
+
+        if (myLibrary[i].read) {
+            td5.innerHTML = "<i class='bi bi-check'></i>";
+        } else {
+            td5.innerHTML = "<i class='bi bi-x'></i>";
+        }
+
+        td6.innerHTML = "<i class='bi bi-trash'></i>";
+        td6.className = "text-danger";
         td6.addEventListener("click", function() {
             myLibrary.splice(i, 1);
             displayBooks();
@@ -71,4 +77,20 @@ function displayBooks() {
         tr.appendChild(td6);
         tableBody.appendChild(tr);
     }
+}
+
+function darkMode() {
+    let body = document.body;
+    let table = document.getElementById("table");
+    let lightbulb = document.getElementById("lightbulb");
+    let modal = document.getElementById("modal-content");
+    body.classList.toggle("bg-dark");
+    body.classList.toggle("text-light");
+    table.classList.toggle("bg-dark");
+    table.classList.toggle("text-light");
+    modal.classList.toggle("bg-dark");
+    modal.classList.toggle("text-light");
+    lightbulb.classList.toggle("bi-lightbulb");
+    lightbulb.classList.toggle("bi-lightbulb-fill");
+    lightbulb.classList.toggle("text-light");
 }
