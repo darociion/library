@@ -80,11 +80,6 @@ i {
     table {
         display: inline-table;
     }
-
-    #add-book {
-        right: 0.5rem;
-        bottom: 0.5rem;
-    }
 }
 
 @media (min-width: 992px) {
