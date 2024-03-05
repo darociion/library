@@ -3,6 +3,7 @@
 
 
 A minimalist library web app made with HTML, CSS and vanilla Javascript.
+You can add a book, change the reading state (clicking on the icon) or remove it from the library. 
 
 
 ## Features :wrench:
