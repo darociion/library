@@ -58,6 +58,7 @@ function displayBooks() {
         let td4 = document.createElement("td");
         let td5 = document.createElement("td");
         let td6 = document.createElement("td");
+        
         td1.textContent = i + 1;
         td2.textContent = myLibrary[i].title;
         td3.textContent = myLibrary[i].author;
@@ -69,12 +70,18 @@ function displayBooks() {
             td5.innerHTML = "<i class='bi bi-x'></i>";
         }
 
+        td5.addEventListener("click", function() {
+            myLibrary[i].read = !myLibrary[i].read;
+            displayBooks();
+        });
+
         td6.innerHTML = "<i class='bi bi-trash'></i>";
         td6.className = "text-danger";
         td6.addEventListener("click", function() {
             myLibrary.splice(i, 1);
             displayBooks();
         });
+
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
